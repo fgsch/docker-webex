@@ -7,13 +7,10 @@ To use it simply clone this repository and run the **webex.sh** script.<br/>
 This will build the image and execute firefox in the resulting container
 ready to go to the WebEx site.
 
-N.B. At the moment this requires the **lxc** exec driver (option
-`--exec-driver=lxc`).
+Please note this runs with `--privileged` since the LXC built-in
+exec driver is no longer available.
 
-To use the **native** driver edit **webex.sh** and replace
-`--lxc-conf='lxc.cgroup.devices.allow = c 116:* rwm'` with `--privileged`.<br/>
-*This will give extended privileges to this container and it's not
-recommended!*
+Chrome users might want to check the Cisco WebEx App for Chrome [2].
 
 Status
 ------
@@ -23,3 +20,4 @@ Status
   Linux client.
 
 1. http://www.webex.com/
+2. https://chrome.google.com/webstore/detail/cisco-webex-extension/jlhmfgmfgeifomenelglieieghnjghma
